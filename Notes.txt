@@ -31,3 +31,14 @@ Adding service inside a module (e.g. in app.module.ts)
 Importing other existing modules
 
 1. Imports array section in the app.module.ts is for importing other existing modules
+
+Why files under assets folder can be statically accessed?
+
+1. Because in angular.json there is an assets array property, you will notice that assets folder is mentioned there.
+This tells WebPack to bundle files under assets folder when it builds the app. Just below the assets section
+there are two arrays for styles and scripts and this tells WebPack to bundle that up and load with the app.
+
+Restarting the server
+
+1. If you change angular.json, you need to restart the server as it is a WebPack config.
+
