@@ -1,0 +1,33 @@
+Angular Application Bootstrap
+
+-Angular components are made up of hierarchical tree. The root of that tree is app component.
+
+Bootstrap Process
+
+1. The bootstrapping of the app begins with main.ts file.
+This is configured in Angular.json file as main property in Angular.json file is pointing to main.ts file.
+
+2. Main.ts is the first component that's loaded. Notice in main.ts, it is bootstrapping app module.
+Note that module comprises components.
+
+3. And then app.module.ts bootstraps AppComponent.
+
+This is why Angular App itself bootstraps with AppComponent.
+
+Displaying Process
+
+1. As per above Angular App starts with AppComponent. But what decides what to display during bootstrap in the UI?
+2. The app component has a selector called app-root.
+3. And the index.html file has <app-root> tag.
+
+Adding component, pipe or directive inside a module (e.g. in app.module.ts)
+
+1. You will need its declaration in the declarations section in the app.module.ts
+
+Adding service inside a module (e.g. in app.module.ts)
+
+1. Services are added in the providers section in the app.module.ts
+
+Importing other existing modules
+
+1. Imports array section in the app.module.ts is for importing other existing modules
